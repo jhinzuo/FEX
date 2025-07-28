@@ -21,14 +21,10 @@ jobs:
       - name: Compile FEXCore
         run: |
           mkdir -p build/arm64ec && cd build/arm64ec
-          ../../Data/nix/cmake_configure_woa64.sh ../../ -G Ninja \
-            -DTUNE_ARCH="armv9-a" \
-            -DTUNE_CPU="cortex-x2"
+          ../../Data/nix/cmake_configure_woa64.sh ../../ -G Ninja
           ninja
           mkdir ../wow64 && cd ../wow64
-          ../../Data/nix/cmake_configure_woa32.sh ../../ -G Ninja \
-            -DTUNE_ARCH="armv9-a" \
-            -DTUNE_CPU="cortex-x2"
+          ../../Data/nix/cmake_configure_woa32.sh ../../ -G Ninja
           ninja
 
       - name: Package FEXCore DLLs and WCP
