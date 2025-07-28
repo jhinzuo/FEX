@@ -1,7 +1,8 @@
-name: Compile FEXCore Armv9-a / cortex-x2 (exynos2200)
+name: Compile FEXCore Armv9-a / cortex-x2 (exynos2200)#
 
 on:
   workflow_dispatch:
+  push:
 
 jobs:
   compile-fexcore:
